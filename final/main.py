@@ -1,6 +1,14 @@
 from packing import *
 
-for user in ["A", "B", "C"]:
+group_list = []
+group_list.append("A")
+group_list.append("B")
+group_list.append("C")
+# ... store the member of group
+
+for user in group_list:
+    if not (os.path.exists(f'public_key_{user}.pem') and os.path.exists(f'private_key_{user}.pem')):
+        generate_rsa_key(user)
     if not (os.path.exists(f'public_key_{user}.pem') and os.path.exists(f'private_key_{user}.pem')):
         generate_rsa_key(user)
 # Sender A sends to receiver B and C
