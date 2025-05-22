@@ -1,5 +1,9 @@
 # crypto_usth
 
+# important
+- main code inside the foler final
+- to run the code, $python main.py
+- libary needed: cryptography, rsa, hashlib
 # overview
 Algorithm used:
 - Symmetric encryption (AES) for message confidentiality.
