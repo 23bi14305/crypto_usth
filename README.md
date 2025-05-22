@@ -15,10 +15,15 @@ Algorithm used:
 - The receivers decrypt the AES key using their private RSA key.
 - Use AES key to and decrypt the message
 - The receiver verifies the signature using the sender’s public RSA key, the decrypted message, and the received signature.
-  
+
+# run demo
+run main.py
+
 # function.py
 - include necessary function
 
+# pack
+(testing...)
 # test dir
 test the flow
 - $python key_generate.py
