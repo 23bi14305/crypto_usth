@@ -1,5 +1,8 @@
 from packing import *
 
+for user in ["A", "B", "C"]:
+    if not (os.path.exists(f'public_key_{user}.pem') and os.path.exists(f'private_key_{user}.pem')):
+        generate_rsa_key(user)
 # Sender A sends to receiver B and C
 original_message = b"Hello from A"
 
