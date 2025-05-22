@@ -1,9 +1,15 @@
 # crypto_usth
 
-# important
-- main code inside the foler final
+# IMPORTANT
+- main code inside the folder final
 - to run the code, $python main.py
 - libary needed: cryptography, rsa, hashlib
+
+# MAIN PROBLEM
+- Scalability
+- Group n member, a sender need to send (n - 1) packets (enc_aes_key, cipher, signature) to the server, then server distributes to corresponding members (need to mark the packet to correct member)
+- Temporary solution: since (cipher, signature), send only 1 time, then send (n - 1) times the (enc_aes_key) to the server (reduce the packet size)
+
 # overview
 Algorithm used:
 - Symmetric encryption (AES) for message confidentiality.
@@ -20,10 +26,11 @@ Algorithm used:
 - Use AES key to and decrypt the message
 - The receiver verifies the signature using the sender’s public RSA key, the decrypted message, and the received signature.
 
+
 # run demo
 run main.py
 
-# function.py
+# all_function.py
 - include necessary function
 
 # pack
