@@ -1,11 +1,16 @@
+from rsa_key_manager import *
 from all_function import *
-import os
+import os  
+
+user_list = []
+user_list.append("A")
+user_list.append("B")
+user_list.append("C")
 
 # Generate RSA keys for users A, B, C if not existing
-for user in ["A", "B", "C"]:
+for user in user_list:
     if not (os.path.exists(f'public_key_{user}.pem') and os.path.exists(f'private_key_{user}.pem')):
-        generate_rsa_key(user)
-
+        ensure_fresh_rsa_key(user)
 # Load keys
 private_key_A = get_private_key("A")
 public_key_A  = get_public_key("A")
